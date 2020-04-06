@@ -3,13 +3,13 @@
 
 <body>
 
-  <p id="p1"></p>
-  <p id="p2"></p>
+  <p      Today: id="p1"></p>
+  <p Days in MN: id="p2"></p>
 
   <script>
     
     const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-    const a = new Date("2020-03-25");
+    const a = new Date("2020-03-25"); // Day 1 in MN
     
     // a and b are javascript Date objects
     function dateDiffInDays(a, b) {
@@ -23,10 +23,10 @@
     
     //var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     
-    difference = dateDiffInDays(a, today);
+    diffMN = dateDiffInDays(a, today);
     
-    document.getElementById("p1").innerHTML = difference;
-    document.getElementById("p2").innerHTML = today;
+    document.getElementById("p1").innerHTML = today;
+    document.getElementById("p2").innerHTML = diffMN;
   </script>
 
   <p>...After the script.</p>

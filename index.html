@@ -4,11 +4,13 @@
 <body>
 
   <p id="p1"></p>
+  <p id="p2"></p>
 
   <script>
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     document.getElementById("p1").innerHTML = date;
+    document.getElementById("p2").innerHTML = today;
   </script>
 
   <p>...After the script.</p>

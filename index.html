@@ -3,10 +3,12 @@
 
 <body>
 
-  <p>Before the script...</p>
+  <p> id="p1"</p>
 
   <script>
-    alert( 'Hello, world!' );
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    document.getElementByI("p1").innerHTML = date
   </script>
 
   <p>...After the script.</p>

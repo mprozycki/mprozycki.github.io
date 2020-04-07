@@ -4,6 +4,7 @@
 <style>
 table, th, td {
   border: 1px solid black;
+  border-collapse: collapse;
 }
 </style>
 </head>
@@ -15,8 +16,20 @@ table, th, td {
       <td id="p1"></th> 
     </tr>
     <tr>
-      <td>Days in MN:</th>
+      <td>Days in SF SIP:</th>
       <td id="p2"></th> 
+    </tr>
+    <tr>
+      <td>Days in CA S@H:</th>
+      <td id="p3"></th> 
+    </tr>
+    <tr>
+      <td>Days in MN:</th>
+      <td id="p4"></th> 
+    </tr>
+    <tr>
+      <td>Days in MN S@H:</th>
+      <td id="p5"></th> 
     </tr>
   </table>
    
@@ -24,7 +37,10 @@ table, th, td {
   <script>
     
     const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-    const a = new Date("2020-03-25"); // Day 1 in MN
+    const a = new Date("2020-03-17"); // Day 1 SF SIP
+    const b = new Date("2020-03-19"); // Day 1 CA S@H
+    const c = new Date("2020-03-25"); // Day 1 in MN
+    const d = new Date("2020-03-28"); // Day 1 MN S@H
     
     // a and b are javascript Date objects
     function dateDiffInDays(a, b) {
@@ -38,10 +54,16 @@ table, th, td {
     
     //var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     
-    diffMN = dateDiffInDays(a, today);
+    diffA = dateDiffInDays(a, today);
+    diffB = dateDiffInDays(b, today);
+    diffC = dateDiffInDays(c, today);
+    diffD = dateDiffInDays(d, today);
     
     document.getElementById("p1").innerHTML = today;
-    document.getElementById("p2").innerHTML = diffMN;
+    document.getElementById("p2").innerHTML = diffA;
+    document.getElementById("p3").innerHTML = diffB;
+    document.getElementById("p4").innerHTML = diffC;
+    document.getElementById("p5").innerHTML = diffD;
   </script>
 
   <p>mpr v1 6-Apr-2020</p>

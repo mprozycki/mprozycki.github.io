@@ -11,78 +11,8 @@ table, th, td {
 </head>
 <body>
 
-  <table style="width:100%">
-    <col align="right">
-    <col align="left">
-    <tr>
-      <td style="text-align:right">Today:</th>
-      <td id="p1"></th> 
-    </tr>
-    <tr>
-      <td style="text-align:right">Days in SF SIP/mpr@wfm:</th>
-      <td id="p2"></th> 
-    </tr>
-    <tr>
-      <td style="text-align:right">Days in CA S@H order:</th>
-      <td id="p3"></th> 
-    </tr>
-    <tr>
-      <td style="text-align:right">Days in MN mpr&vbr:</th>
-      <td id="p4"></th> 
-    </tr>
-    <tr>
-      <td style="text-align:right">Days in MN S@H order:</th>
-      <td id="p5"></th> 
-    </tr>
-	<tr>
-      <td style="text-align:left;color:blue;">Days to USPS Hold end:</th>
-      <td id="p6"></th> 
-    </tr>
-    <tr>
-      <td style="text-align:left;color:blue;">Days to SFO return:</th>
-      <td id="p7"></th> 
-    </tr>
-  </table>
-   
-
-  <script>
-    
-    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-    const a = new Date("2020-03-17"); // Day 1 SF SIP
-    const b = new Date("2020-03-19"); // Day 1 CA S@H
-    const c = new Date("2020-03-25"); // Day 1 in MN
-    const d = new Date("2020-03-28"); // Day 1 MN S@H
-
-    const e = new Date("2020-05-23"); // Day of USPS end temp address  
-	const f = new Date("2020-05-28"); // Day of Hertz return & Delta to SFO
-	
-	// a and b are javascript Date objects
-    function dateDiffInDays(a, b) {
-    // Discard the time and time-zone information.
-      const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
-      const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
-      return Math.floor((utc2 - utc1) / _MS_PER_DAY);
-    }
-    
-    var today = new Date();
-    
-    //var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    
-    diffA = dateDiffInDays(a, today);
-    diffB = dateDiffInDays(b, today);
-    diffC = dateDiffInDays(c, today);
-    diffD = dateDiffInDays(d, today);
-	diffE = dateDiffInDays(today,e) +1;
- 	diffF = dateDiffInDays(today,f) +1;   
-	
-    document.getElementById("p1").innerHTML = today;
-    document.getElementById("p2").innerHTML = diffA;
-    document.getElementById("p3").innerHTML = diffB;
-    document.getElementById("p4").innerHTML = diffC;
-    document.getElementById("p5").innerHTML = diffD;
-	document.getElementById("p6").innerHTML = diffE;
-	document.getElementById("p7").innerHTML = diffF;
-  </script>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
 
   <p style="color: red; font-size: 10px;">
 	v1 25-Jun-2025<br>
